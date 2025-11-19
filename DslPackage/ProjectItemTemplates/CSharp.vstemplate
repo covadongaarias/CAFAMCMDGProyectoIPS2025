@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{c00c0dd1-0336-4ce5-a12e-67480a2038c3}</TemplateID>
+		<Name Package="{f482d598-6274-460b-a3c0-9424f70b68e1}" ID="103"/>
+		<Description Package="{f482d598-6274-460b-a3c0-9424f70b68e1}" ID="102"/>
+		<Icon Package="{f482d598-6274-460b-a3c0-9424f70b68e1}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>CAFAMCMDGProyectoIPS2025.CAFAMCMDG_ProyectoIPS2025</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.CAFAMCMDG_ProyectoIPS2025">CAFAMCMDG_ProyectoIPS2025.CAFAMCMDG_ProyectoIPS2025</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.CAFAMCMDG_ProyectoIPS2025.diagram">CAFAMCMDG_ProyectoIPS2025.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+
