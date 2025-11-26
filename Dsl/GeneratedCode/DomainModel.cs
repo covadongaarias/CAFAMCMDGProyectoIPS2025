@@ -78,14 +78,17 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 				typeof(EntidadTieneAtributoClave),
 				typeof(RelacionTieneAtributoRelacion),
 				typeof(EntidadTieneAtributoEntidad),
-				typeof(RelacionTieneEntidad),
+				typeof(EntidadReferenciasRelacion),
+				typeof(DenWebBDTieneEntidad),
 				typeof(CAFAMCMDGProyectoIPS2025Diagram),
+				typeof(ConnectorER),
 				typeof(EntidadShape),
 				typeof(RelacionShape),
 				typeof(AtributoClaveShape),
 				typeof(AtributoEntidadShape),
 				typeof(AtributoRelacionShape),
 				typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.FixUpDiagram),
+				typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.ConnectorRolePlayerChanged),
 			};
 		}
 		/// <summary>
@@ -122,8 +125,10 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 				new DomainRolePlayerInfo(typeof(RelacionTieneAtributoRelacion), "AtributoRelacion", RelacionTieneAtributoRelacion.AtributoRelacionDomainRoleId),
 				new DomainRolePlayerInfo(typeof(EntidadTieneAtributoEntidad), "Entidad", EntidadTieneAtributoEntidad.EntidadDomainRoleId),
 				new DomainRolePlayerInfo(typeof(EntidadTieneAtributoEntidad), "AtributoEntidad", EntidadTieneAtributoEntidad.AtributoEntidadDomainRoleId),
-				new DomainRolePlayerInfo(typeof(RelacionTieneEntidad), "Relacion", RelacionTieneEntidad.RelacionDomainRoleId),
-				new DomainRolePlayerInfo(typeof(RelacionTieneEntidad), "Entidad", RelacionTieneEntidad.EntidadDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EntidadReferenciasRelacion), "Entidad", EntidadReferenciasRelacion.EntidadDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EntidadReferenciasRelacion), "Relacion", EntidadReferenciasRelacion.RelacionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(DenWebBDTieneEntidad), "DenWebBD", DenWebBDTieneEntidad.DenWebBDDomainRoleId),
+				new DomainRolePlayerInfo(typeof(DenWebBDTieneEntidad), "Entidad", DenWebBDTieneEntidad.EntidadDomainRoleId),
 			};
 		}
 		#endregion
@@ -145,7 +150,7 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(14);
 				createElementMap.Add(typeof(DenWebBD), 0);
 				createElementMap.Add(typeof(Entidad), 1);
 				createElementMap.Add(typeof(Relacion), 2);
@@ -153,11 +158,12 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 				createElementMap.Add(typeof(AtributoRelacion), 4);
 				createElementMap.Add(typeof(AtributoClave), 5);
 				createElementMap.Add(typeof(CAFAMCMDGProyectoIPS2025Diagram), 6);
-				createElementMap.Add(typeof(EntidadShape), 7);
-				createElementMap.Add(typeof(RelacionShape), 8);
-				createElementMap.Add(typeof(AtributoClaveShape), 9);
-				createElementMap.Add(typeof(AtributoEntidadShape), 10);
-				createElementMap.Add(typeof(AtributoRelacionShape), 11);
+				createElementMap.Add(typeof(ConnectorER), 7);
+				createElementMap.Add(typeof(EntidadShape), 8);
+				createElementMap.Add(typeof(RelacionShape), 9);
+				createElementMap.Add(typeof(AtributoClaveShape), 10);
+				createElementMap.Add(typeof(AtributoEntidadShape), 11);
+				createElementMap.Add(typeof(AtributoRelacionShape), 12);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -178,11 +184,12 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 				case 4: return new AtributoRelacion(partition, propertyAssignments);
 				case 5: return new AtributoClave(partition, propertyAssignments);
 				case 6: return new CAFAMCMDGProyectoIPS2025Diagram(partition, propertyAssignments);
-				case 7: return new EntidadShape(partition, propertyAssignments);
-				case 8: return new RelacionShape(partition, propertyAssignments);
-				case 9: return new AtributoClaveShape(partition, propertyAssignments);
-				case 10: return new AtributoEntidadShape(partition, propertyAssignments);
-				case 11: return new AtributoRelacionShape(partition, propertyAssignments);
+				case 7: return new ConnectorER(partition, propertyAssignments);
+				case 8: return new EntidadShape(partition, propertyAssignments);
+				case 9: return new RelacionShape(partition, propertyAssignments);
+				case 10: return new AtributoClaveShape(partition, propertyAssignments);
+				case 11: return new AtributoEntidadShape(partition, propertyAssignments);
+				case 12: return new AtributoRelacionShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -205,12 +212,13 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
 				createElementLinkMap.Add(typeof(DenWebBDTieneRelacion), 0);
 				createElementLinkMap.Add(typeof(EntidadTieneAtributoClave), 1);
 				createElementLinkMap.Add(typeof(RelacionTieneAtributoRelacion), 2);
 				createElementLinkMap.Add(typeof(EntidadTieneAtributoEntidad), 3);
-				createElementLinkMap.Add(typeof(RelacionTieneEntidad), 4);
+				createElementLinkMap.Add(typeof(EntidadReferenciasRelacion), 4);
+				createElementLinkMap.Add(typeof(DenWebBDTieneEntidad), 5);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -229,7 +237,8 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 				case 1: return new EntidadTieneAtributoClave(partition, roleAssignments, propertyAssignments);
 				case 2: return new RelacionTieneAtributoRelacion(partition, roleAssignments, propertyAssignments);
 				case 3: return new EntidadTieneAtributoEntidad(partition, roleAssignments, propertyAssignments);
-				case 4: return new RelacionTieneEntidad(partition, roleAssignments, propertyAssignments);
+				case 4: return new EntidadReferenciasRelacion(partition, roleAssignments, propertyAssignments);
+				case 5: return new DenWebBDTieneEntidad(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -350,6 +359,7 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.ConnectorRolePlayerChanged));
 		}
 		
 		/// <summary>
@@ -361,6 +371,7 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.ConnectorRolePlayerChanged));
 		}
 		#endregion
 	}
@@ -400,7 +411,8 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 			DomainRoles.Add(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadTieneAtributoClave.AtributoClaveDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneAtributoRelacion.AtributoRelacionDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadTieneAtributoEntidad.AtributoEntidadDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.EntidadDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.RelacionDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.EntidadDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

@@ -6,6 +6,125 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-//
-// This file is empty because the DSL definition does not define any Connectors.
-//
+
+using DslModeling = global::Microsoft.VisualStudio.Modeling;
+using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
+using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
+
+namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
+{
+	/// <summary>
+	/// DomainClass ConnectorER
+	/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.ConnectorER
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.ConnectorER.DisplayName", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.ConnectorER.Description", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("65586f04-0bd7-44db-9483-9c35a01ebd2e")]
+	public partial class ConnectorER : DslDiagrams::BinaryLinkShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with ConnectorER.
+		/// </summary>
+		public static DslDiagrams::Decorator FindConnectorERDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		
+		#region Connector styles
+		#endregion
+		
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ConnectorER domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x65586f04, 0x0bd7, 0x44db, 0x94, 0x83, 0x9c, 0x35, 0xa0, 0x1e, 0xbd, 0x2e);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ConnectorER(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ConnectorER(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}

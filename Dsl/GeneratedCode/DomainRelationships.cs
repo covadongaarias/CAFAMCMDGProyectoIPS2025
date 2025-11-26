@@ -974,33 +974,33 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 {
 	/// <summary>
-	/// DomainRelationship RelacionTieneEntidad
-	/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad
+	/// DomainRelationship EntidadReferenciasRelacion
+	/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.DisplayName", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.Description", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.DisplayName", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.Description", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("1236c13b-96fb-48b4-8f32-fe8cccfd6b20")]
-	public partial class RelacionTieneEntidad : DslModeling::ElementLink
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("35f74ecf-6a5a-4bdc-a11b-b4ff58c5ed5a")]
+	public partial class EntidadReferenciasRelacion : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// RelacionTieneEntidad domain class Id.
+		/// EntidadReferenciasRelacion domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x1236c13b, 0x96fb, 0x48b4, 0x8f, 0x32, 0xfe, 0x8c, 0xcc, 0xfd, 0x6b, 0x20);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x35f74ecf, 0x6a5a, 0x4bdc, 0xa1, 0x1b, 0xb4, 0xff, 0x58, 0xc5, 0xed, 0x5a);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a RelacionTieneEntidad link in the same Partition as the given Relacion
+		/// Creates a EntidadReferenciasRelacion link in the same Partition as the given Entidad
 		/// </summary>
-		/// <param name="source">Relacion to use as the source of the relationship.</param>
-		/// <param name="target">Entidad to use as the target of the relationship.</param>
-		public RelacionTieneEntidad(Relacion source, Entidad target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(RelacionTieneEntidad.RelacionDomainRoleId, source), new DslModeling::RoleAssignment(RelacionTieneEntidad.EntidadDomainRoleId, target)}, null)
+		/// <param name="source">Entidad to use as the source of the relationship.</param>
+		/// <param name="target">Relacion to use as the target of the relationship.</param>
+		public EntidadReferenciasRelacion(Entidad source, Relacion target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(EntidadReferenciasRelacion.EntidadDomainRoleId, source), new DslModeling::RoleAssignment(EntidadReferenciasRelacion.RelacionDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -1009,7 +1009,7 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public RelacionTieneEntidad(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public EntidadReferenciasRelacion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -1020,7 +1020,7 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public RelacionTieneEntidad(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public EntidadReferenciasRelacion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1030,7 +1030,7 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public RelacionTieneEntidad(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public EntidadReferenciasRelacion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -1041,60 +1041,9 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public RelacionTieneEntidad(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public EntidadReferenciasRelacion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
-		}
-		#endregion
-		#region Relacion domain role code
-		
-		/// <summary>
-		/// Relacion domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid RelacionDomainRoleId = new global::System.Guid(0x1f049442, 0x064d, 0x45ed, 0x9f, 0x01, 0x75, 0x6b, 0x84, 0x61, 0x66, 0xb8);
-		
-		/// <summary>
-		/// DomainRole Relacion
-		/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.Relacion
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad/Relacion.DisplayName", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad/Relacion.Description", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad/Relacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("1f049442-064d-45ed-9f01-756b846166b8")]
-		public virtual Relacion Relacion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Relacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, RelacionDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, RelacionDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Relacion of a Entidad
-		/// <summary>
-		/// Gets Relacion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Relacion GetRelacion(Entidad element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EntidadDomainRoleId) as Relacion;
-		}
-		
-		/// <summary>
-		/// Sets Relacion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetRelacion(Entidad element, Relacion newRelacion)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, EntidadDomainRoleId, newRelacion);
 		}
 		#endregion
 		#region Entidad domain role code
@@ -1102,16 +1051,17 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 		/// <summary>
 		/// Entidad domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid EntidadDomainRoleId = new global::System.Guid(0x8ebe6394, 0xd2c9, 0x4f5f, 0xa0, 0x14, 0xa9, 0x4c, 0x53, 0x39, 0xa1, 0xa3);
+		public static readonly global::System.Guid EntidadDomainRoleId = new global::System.Guid(0x0cb394bf, 0x701b, 0x4d65, 0xab, 0xad, 0x9b, 0x09, 0xfc, 0xa9, 0x94, 0xd0);
 		
 		/// <summary>
 		/// DomainRole Entidad
-		/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.Entidad
+		/// Descripción de
+		/// UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.Entidad
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad/Entidad.DisplayName", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad/Entidad.Description", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Relacion", PropertyDisplayNameKey="UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad/Entidad.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("8ebe6394-d2c9-4f5f-a014-a94c5339a1a3")]
+		[DslDesign::DisplayNameResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion/Entidad.DisplayName", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion/Entidad.Description", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Relacion", PropertyDisplayNameKey="UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion/Entidad.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("0cb394bf-701b-4d65-abad-9b09fca994d0")]
 		public virtual Entidad Entidad
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
@@ -1138,26 +1088,298 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(element, RelacionDomainRoleId);
 		}
 		#endregion
-		#region Relacion link accessor
+		#region Relacion domain role code
+		
 		/// <summary>
-		/// Get the list of RelacionTieneEntidad links to a Relacion.
+		/// Relacion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid RelacionDomainRoleId = new global::System.Guid(0xaa707804, 0xaa60, 0x4d99, 0xa5, 0xc4, 0xb3, 0x31, 0x1c, 0x88, 0x44, 0x65);
+		
+		/// <summary>
+		/// DomainRole Relacion
+		/// Descripción de
+		/// UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.Relacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion/Relacion.DisplayName", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion/Relacion.Description", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion/Relacion.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("aa707804-aa60-4d99-a5c4-b3311c884465")]
+		public virtual Relacion Relacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Relacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, RelacionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, RelacionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Relacion of a Entidad
+		/// <summary>
+		/// Gets a list of Relacion.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad> GetLinksToEntidad ( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Relacion relacionInstance )
+		public static DslModeling::LinkedElementCollection<Relacion> GetRelacion(Entidad element)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad>(relacionInstance, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.RelacionDomainRoleId);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Relacion>, Relacion>(element, EntidadDomainRoleId);
 		}
 		#endregion
 		#region Entidad link accessor
 		/// <summary>
-		/// Get the RelacionTieneEntidad link to a Entidad.
+		/// Get the list of EntidadReferenciasRelacion links to a Entidad.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad GetLinkToRelacion (global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad entidadInstance)
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion> GetLinksToRelacion ( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad entidadInstance )
 		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad>(entidadInstance, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.EntidadDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion>(entidadInstance, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.EntidadDomainRoleId);
+		}
+		#endregion
+		#region Relacion link accessor
+		/// <summary>
+		/// Get the list of EntidadReferenciasRelacion links to a Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion> GetLinksToEntidad ( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Relacion relacionInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion>(relacionInstance, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.RelacionDomainRoleId);
+		}
+		#endregion
+		#region EntidadReferenciasRelacion instance accessors
+		
+		/// <summary>
+		/// Get any EntidadReferenciasRelacion links between a given Entidad and a Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion> GetLinks( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Relacion target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion>(source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.EntidadDomainRoleId);
+			foreach ( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion link in links )
+			{
+				if ( target.Equals(link.Relacion) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one EntidadReferenciasRelacion link between a given Entidadand a Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion GetLink( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Relacion target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion>(source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.EntidadDomainRoleId);
+			foreach ( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion link in links )
+			{
+				if ( target.Equals(link.Relacion) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
+{
+	/// <summary>
+	/// DomainRelationship DenWebBDTieneEntidad
+	/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.DisplayName", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.Description", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("f5667def-dafe-4290-a9ec-9cef6c228bdd")]
+	public partial class DenWebBDTieneEntidad : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// DenWebBDTieneEntidad domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf5667def, 0xdafe, 0x4290, 0xa9, 0xec, 0x9c, 0xef, 0x6c, 0x22, 0x8b, 0xdd);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a DenWebBDTieneEntidad link in the same Partition as the given DenWebBD
+		/// </summary>
+		/// <param name="source">DenWebBD to use as the source of the relationship.</param>
+		/// <param name="target">Entidad to use as the target of the relationship.</param>
+		public DenWebBDTieneEntidad(DenWebBD source, Entidad target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(DenWebBDTieneEntidad.DenWebBDDomainRoleId, source), new DslModeling::RoleAssignment(DenWebBDTieneEntidad.EntidadDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public DenWebBDTieneEntidad(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public DenWebBDTieneEntidad(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public DenWebBDTieneEntidad(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public DenWebBDTieneEntidad(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region DenWebBD domain role code
+		
+		/// <summary>
+		/// DenWebBD domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid DenWebBDDomainRoleId = new global::System.Guid(0xb050ccbd, 0xc286, 0x4614, 0x98, 0x51, 0x68, 0x45, 0xcb, 0xfc, 0x9f, 0x5c);
+		
+		/// <summary>
+		/// DomainRole DenWebBD
+		/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.DenWebBD
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad/DenWebBD.DisplayName", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad/DenWebBD.Description", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad/DenWebBD.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("b050ccbd-c286-4614-9851-6845cbfc9f5c")]
+		public virtual DenWebBD DenWebBD
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (DenWebBD)DslModeling::DomainRoleInfo.GetRolePlayer(this, DenWebBDDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, DenWebBDDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access DenWebBD of a Entidad
+		/// <summary>
+		/// Gets DenWebBD.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DenWebBD GetDenWebBD(Entidad element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EntidadDomainRoleId) as DenWebBD;
+		}
+		
+		/// <summary>
+		/// Sets DenWebBD.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetDenWebBD(Entidad element, DenWebBD newDenWebBD)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, EntidadDomainRoleId, newDenWebBD);
+		}
+		#endregion
+		#region Entidad domain role code
+		
+		/// <summary>
+		/// Entidad domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EntidadDomainRoleId = new global::System.Guid(0x54477751, 0x9f11, 0x4e2e, 0x9f, 0x73, 0x14, 0x4f, 0xe4, 0x63, 0xdf, 0x6d);
+		
+		/// <summary>
+		/// DomainRole Entidad
+		/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.Entidad
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad/Entidad.DisplayName", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad/Entidad.Description", typeof(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025DomainModel), "UPM_IPS.CAFAMCMDGProyectoIPS2025.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "DenWebBD", PropertyDisplayNameKey="UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad/Entidad.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("54477751-9f11-4e2e-9f73-144fe463df6d")]
+		public virtual Entidad Entidad
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Entidad)DslModeling::DomainRoleInfo.GetRolePlayer(this, EntidadDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EntidadDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Entidad of a DenWebBD
+		/// <summary>
+		/// Gets a list of Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Entidad> GetEntidad(DenWebBD element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(element, DenWebBDDomainRoleId);
+		}
+		#endregion
+		#region DenWebBD link accessor
+		/// <summary>
+		/// Get the list of DenWebBDTieneEntidad links to a DenWebBD.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad> GetLinksToEntidad ( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBD denWebBDInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad>(denWebBDInstance, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.DenWebBDDomainRoleId);
+		}
+		#endregion
+		#region Entidad link accessor
+		/// <summary>
+		/// Get the DenWebBDTieneEntidad link to a Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad GetLinkToDenWebBD (global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad entidadInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad>(entidadInstance, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.EntidadDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Entidad not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1169,18 +1391,18 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 			}
 		}
 		#endregion
-		#region RelacionTieneEntidad instance accessors
+		#region DenWebBDTieneEntidad instance accessors
 		
 		/// <summary>
-		/// Get any RelacionTieneEntidad links between a given Relacion and a Entidad.
+		/// Get any DenWebBDTieneEntidad links between a given DenWebBD and a Entidad.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad> GetLinks( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Relacion source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad> GetLinks( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBD source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad target )
 		{
-			global::System.Collections.Generic.List<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad>(source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.RelacionDomainRoleId);
-			foreach ( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad link in links )
+			global::System.Collections.Generic.List<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad>(source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.DenWebBDDomainRoleId);
+			foreach ( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad link in links )
 			{
 				if ( target.Equals(link.Entidad) )
 				{
@@ -1190,14 +1412,14 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one RelacionTieneEntidad link between a given Relacionand a Entidad.
+		/// Get the one DenWebBDTieneEntidad link between a given DenWebBDand a Entidad.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad GetLink( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Relacion source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad target )
+		public static global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad GetLink( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBD source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad target )
 		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad>(source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.RelacionDomainRoleId);
-			foreach ( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad link in links )
+			global::System.Collections.Generic.IList<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad>(source, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.DenWebBDDomainRoleId);
+			foreach ( global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad link in links )
 			{
 				if ( target.Equals(link.Entidad) )
 				{

@@ -63,6 +63,21 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 			}
 		}
 		#endregion
+		#region Entidad opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Entidad.
+		/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.DenWebBD
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Entidad> Entidad
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.DenWebBDDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -84,6 +99,11 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Relacion.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad.DomainClassId)) 
 				{
 					return true;
 				}
@@ -120,6 +140,15 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 
 				return;
 			}
+				
+			global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad sourceEntidad2 = sourceElement as global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad;
+			if (sourceEntidad2 != null)
+			{
+				// Create link for path DenWebBDTieneEntidad.Entidad
+				this.Entidad.Add(sourceEntidad2);
+
+				return;
+			}
 		
 			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
 			// during a "Paste".
@@ -152,6 +181,20 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneRelacion.DenWebBDDomainRoleId, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneRelacion.RelacionDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad sourceEntidad2 = sourceElement as global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad;
+			if (sourceEntidad2 != null)
+			{
+				// Delete link for path DenWebBDTieneEntidad.Entidad
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.GetLinks((global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBD)this, sourceEntidad2))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.DenWebBDDomainRoleId, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.EntidadDomainRoleId);
 				}
 
 				return;
@@ -321,21 +364,37 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 		}
 		#endregion
 		#region Relacion opposite domain role accessor
+		
 		/// <summary>
-		/// Gets or sets Relacion.
-		/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.Entidad
+		/// Gets a list of Relacion.
+		/// Descripción de
+		/// UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.Entidad
 		/// </summary>
-		public virtual Relacion Relacion
+		public virtual DslModeling::LinkedElementCollection<Relacion> Relacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.EntidadDomainRoleId) as Relacion;
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Relacion>, Relacion>(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.EntidadDomainRoleId);
+			}
+		}
+		#endregion
+		#region DenWebBD opposite domain role accessor
+		/// <summary>
+		/// Gets or sets DenWebBD.
+		/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.Entidad
+		/// </summary>
+		public virtual DenWebBD DenWebBD
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.EntidadDomainRoleId) as DenWebBD;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.EntidadDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.EntidadDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -805,14 +864,15 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 		
 		/// <summary>
 		/// Gets a list of Entidad.
-		/// Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.Relacion
+		/// Descripción de
+		/// UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.Relacion
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<Entidad> Entidad
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.RelacionDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.RelacionDomainRoleId);
 			}
 		}
 		#endregion
@@ -837,11 +897,6 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.AtributoRelacion.DomainClassId)) 
-				{
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad.DomainClassId)) 
 				{
 					return true;
 				}
@@ -878,15 +933,6 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 
 				return;
 			}
-				
-			global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad sourceEntidad2 = sourceElement as global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad;
-			if (sourceEntidad2 != null)
-			{
-				// Create link for path RelacionTieneEntidad.Entidad
-				this.Entidad.Add(sourceEntidad2);
-
-				return;
-			}
 		
 			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
 			// during a "Paste".
@@ -919,20 +965,6 @@ namespace UPM_IPS.CAFAMCMDGProyectoIPS2025
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneAtributoRelacion.RelacionDomainRoleId, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneAtributoRelacion.AtributoRelacionDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad sourceEntidad2 = sourceElement as global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad;
-			if (sourceEntidad2 != null)
-			{
-				// Delete link for path RelacionTieneEntidad.Entidad
-				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.GetLinks((global::UPM_IPS.CAFAMCMDGProyectoIPS2025.Relacion)this, sourceEntidad2))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.RelacionDomainRoleId, global::UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.EntidadDomainRoleId);
 				}
 
 				return;

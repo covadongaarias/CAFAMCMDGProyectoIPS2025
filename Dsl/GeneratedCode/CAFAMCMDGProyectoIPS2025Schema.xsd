@@ -25,6 +25,21 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+          <!-- Relationship: DenWebBDTieneEntidad -->
+          <xsd:element name="entidad" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of DenWebBDTieneEntidad</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="denWebBDTieneEntidad" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of DenWebBDTieneEntidad needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
         </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
@@ -95,6 +110,21 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+          <!-- Relationship: EntidadReferenciasRelacion -->
+          <xsd:element name="relacion" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of EntidadReferenciasRelacion</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="entidadReferenciasRelacion" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of EntidadReferenciasRelacion needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
         </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
@@ -141,21 +171,6 @@
                 <xsd:element ref="relacionTieneAtributoRelacion" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of RelacionTieneAtributoRelacion needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: RelacionTieneEntidad -->
-          <xsd:element name="entidad" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instances of RelacionTieneEntidad</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="relacionTieneEntidad" minOccurs="0" maxOccurs="unbounded">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of RelacionTieneEntidad needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -474,9 +489,49 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- RelacionTieneEntidad -->
-  <xsd:element name="relacionTieneEntidad" type="RelacionTieneEntidad" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="RelacionTieneEntidad">
+  <!-- EntidadReferenciasRelacion -->
+  <xsd:element name="entidadReferenciasRelacion" type="EntidadReferenciasRelacion" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="EntidadReferenciasRelacion">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Relacion -->
+          <xsd:element ref="monikerRelacion" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EntidadReferenciasRelacion Moniker -->
+  <xsd:element name="monikerEntidadReferenciasRelacion" type="MonikerEntidadReferenciasRelacion" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MonikerEntidadReferenciasRelacion">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EntidadReferenciasRelacion instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DenWebBDTieneEntidad -->
+  <xsd:element name="denWebBDTieneEntidad" type="DenWebBDTieneEntidad" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DenWebBDTieneEntidad">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -497,11 +552,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- RelacionTieneEntidad Moniker -->
-  <xsd:element name="monikerRelacionTieneEntidad" type="MonikerRelacionTieneEntidad" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="MonikerRelacionTieneEntidad">
+  <!-- DenWebBDTieneEntidad Moniker -->
+  <xsd:element name="monikerDenWebBDTieneEntidad" type="MonikerDenWebBDTieneEntidad" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MonikerDenWebBDTieneEntidad">
     <xsd:annotation>
-      <xsd:documentation>Moniker for RelacionTieneEntidad instance.</xsd:documentation>
+      <xsd:documentation>Moniker for DenWebBDTieneEntidad instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

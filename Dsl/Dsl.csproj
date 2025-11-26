@@ -161,6 +161,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\pngwing.com.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
     </None>

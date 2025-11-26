@@ -11,6 +11,14 @@
             <DomainPath>DenWebBDTieneRelacion.Relacion</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Entidad" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>DenWebBDTieneEntidad.Entidad</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="6ca7433c-00f7-436a-8135-ce577eda80c8" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.Entidad" Name="Entidad" DisplayName="Entidad" Namespace="UPM_IPS.CAFAMCMDGProyectoIPS2025">
@@ -65,14 +73,6 @@
           </Index>
           <LinkCreationPaths>
             <DomainPath>RelacionTieneAtributoRelacion.AtributoRelacion</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="Entidad" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>RelacionTieneEntidad.Entidad</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -179,16 +179,32 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="1236c13b-96fb-48b4-8f32-fe8cccfd6b20" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad" Name="RelacionTieneEntidad" DisplayName="Relacion Tiene Entidad" Namespace="UPM_IPS.CAFAMCMDGProyectoIPS2025" IsEmbedding="true">
+    <DomainRelationship Id="35f74ecf-6a5a-4bdc-a11b-b4ff58c5ed5a" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion" Name="EntidadReferenciasRelacion" DisplayName="Entidad Referencias Relacion" Namespace="UPM_IPS.CAFAMCMDGProyectoIPS2025">
       <Source>
-        <DomainRole Id="1f049442-064d-45ed-9f01-756b846166b8" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.Relacion" Name="Relacion" DisplayName="Relacion" PropertyName="Entidad" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Entidad">
+        <DomainRole Id="0cb394bf-701b-4d65-abad-9b09fca994d0" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="Relacion" PropertyDisplayName="Relacion">
           <RolePlayer>
-            <DomainClassMoniker Name="Relacion" />
+            <DomainClassMoniker Name="Entidad" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="8ebe6394-d2c9-4f5f-a014-a94c5339a1a3" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.RelacionTieneEntidad.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="Relacion" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Relacion">
+        <DomainRole Id="aa707804-aa60-4d99-a5c4-b3311c884465" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.EntidadReferenciasRelacion.Relacion" Name="Relacion" DisplayName="Relacion" PropertyName="Entidad" PropagatesDelete="true" PropertyDisplayName="Entidad">
+          <RolePlayer>
+            <DomainClassMoniker Name="Relacion" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="f5667def-dafe-4290-a9ec-9cef6c228bdd" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad" Name="DenWebBDTieneEntidad" DisplayName="Den Web BDTiene Entidad" Namespace="UPM_IPS.CAFAMCMDGProyectoIPS2025" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="b050ccbd-c286-4614-9851-6845cbfc9f5c" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.DenWebBD" Name="DenWebBD" DisplayName="Den Web BD" PropertyName="Entidad" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Entidad">
+          <RolePlayer>
+            <DomainClassMoniker Name="DenWebBD" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="54477751-9f11-4e2e-9f73-144fe463df6d" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.DenWebBDTieneEntidad.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="DenWebBD" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Den Web BD">
           <RolePlayer>
             <DomainClassMoniker Name="Entidad" />
           </RolePlayer>
@@ -241,6 +257,9 @@
       </ShapeHasDecorators>
     </GeometryShape>
   </Shapes>
+  <Connectors>
+    <Connector Id="65586f04-0bd7-44db-9483-9c35a01ebd2e" Description="Descripción de UPM_IPS.CAFAMCMDGProyectoIPS2025.ConnectorER" Name="ConnectorER" DisplayName="Connector ER" Namespace="UPM_IPS.CAFAMCMDGProyectoIPS2025" FixedTooltipText="Connector ER" />
+  </Connectors>
   <XmlSerializationBehavior Name="CAFAMCMDGProyectoIPS2025SerializationBehavior" Namespace="UPM_IPS.CAFAMCMDGProyectoIPS2025">
     <ClassData>
       <XmlClassData TypeName="DenWebBD" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelMoniker" ElementName="denWebBD" MonikerTypeName="ExampleModelMoniker">
@@ -248,6 +267,9 @@
         <ElementData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="relacion">
             <DomainRelationshipMoniker Name="DenWebBDTieneRelacion" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="entidad">
+            <DomainRelationshipMoniker Name="DenWebBDTieneEntidad" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -266,6 +288,9 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributoEntidad">
             <DomainRelationshipMoniker Name="EntidadTieneAtributoEntidad" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="relacion">
+            <DomainRelationshipMoniker Name="EntidadReferenciasRelacion" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="Relacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerRelacion" ElementName="relacion" MonikerTypeName="MonikerRelacion">
@@ -283,9 +308,6 @@
           <XmlPropertyData XmlName="cMin">
             <DomainPropertyMoniker Name="Relacion/cMin" />
           </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="entidad">
-            <DomainRelationshipMoniker Name="RelacionTieneEntidad" />
-          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="DenWebBDTieneRelacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerExampleModelTieneRelacion" ElementName="denWebBDTieneRelacion" MonikerTypeName="MonikerExampleModelTieneRelacion">
@@ -340,12 +362,39 @@
       <XmlClassData TypeName="AtributoRelacionShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerAtributoRelacionShape" ElementName="atributoRelacionShape" MonikerTypeName="MonikerAtributoRelacionShape">
         <GeometryShapeMoniker Name="AtributoRelacionShape" />
       </XmlClassData>
-      <XmlClassData TypeName="RelacionTieneEntidad" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerRelacionTieneEntidad" ElementName="relacionTieneEntidad" MonikerTypeName="MonikerRelacionTieneEntidad">
-        <DomainRelationshipMoniker Name="RelacionTieneEntidad" />
+      <XmlClassData TypeName="ConnectorER" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerConnectorER" ElementName="connectorER" MonikerTypeName="MonikerConnectorER">
+        <ConnectorMoniker Name="ConnectorER" />
+      </XmlClassData>
+      <XmlClassData TypeName="EntidadReferenciasRelacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerEntidadReferenciasRelacion" ElementName="entidadReferenciasRelacion" MonikerTypeName="MonikerEntidadReferenciasRelacion">
+        <DomainRelationshipMoniker Name="EntidadReferenciasRelacion" />
+      </XmlClassData>
+      <XmlClassData TypeName="DenWebBDTieneEntidad" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerDenWebBDTieneEntidad" ElementName="denWebBDTieneEntidad" MonikerTypeName="MonikerDenWebBDTieneEntidad">
+        <DomainRelationshipMoniker Name="DenWebBDTieneEntidad" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="CAFAMCMDGProyectoIPS2025Explorer" />
+  <ConnectionBuilders>
+    <ConnectionBuilder Name="GeneradorEntidadReferenciasRelacion">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="EntidadReferenciasRelacion" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Entidad" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Relacion" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+  </ConnectionBuilders>
   <Diagram Id="b65a2db3-8617-4272-b68f-2b5bc43cced4" Description="Description for UPM_IPS.CAFAMCMDGProyectoIPS2025.CAFAMCMDGProyectoIPS2025Diagram" Name="CAFAMCMDGProyectoIPS2025Diagram" DisplayName="Minimal Language Diagram" Namespace="UPM_IPS.CAFAMCMDGProyectoIPS2025" FillColor="Gold">
     <Class>
       <DomainClassMoniker Name="DenWebBD" />
@@ -368,11 +417,17 @@
       <ShapeMap>
         <DomainClassMoniker Name="Entidad" />
         <ParentElementPath>
-          <DomainPath>RelacionTieneEntidad.Relacion/!Relacion/DenWebBDTieneRelacion.DenWebBD/!DenWebBD</DomainPath>
+          <DomainPath>DenWebBDTieneEntidad.DenWebBD/!DenWebBD</DomainPath>
         </ParentElementPath>
         <GeometryShapeMoniker Name="EntidadShape" />
       </ShapeMap>
     </ShapeMaps>
+    <ConnectorMaps>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConnectorER" />
+        <DomainRelationshipMoniker Name="EntidadReferenciasRelacion" />
+      </ConnectorMap>
+    </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="CAFAMCMDG_ProyectoIPS2025" EditorGuid="fab3049f-7e36-4c94-80b4-4557f5e4a3b2">
     <RootClass>
@@ -397,6 +452,9 @@
       <ElementTool Name="AtributoRelacion" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="AtributoRelacion" Tooltip="Atributo Relacion" HelpKeyword="AtributoRelacion">
         <DomainClassMoniker Name="AtributoRelacion" />
       </ElementTool>
+      <ConnectionTool Name="ConectorER" ToolboxIcon="Resources\pngwing.com.bmp" Caption="ConectorER" Tooltip="Conector ER" HelpKeyword="ConectorER">
+        <ConnectionBuilderMoniker Name="CAFAMCMDGProyectoIPS2025/GeneradorEntidadReferenciasRelacion" />
+      </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="CAFAMCMDGProyectoIPS2025Diagram" />
